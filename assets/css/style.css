@@ -50,4 +50,14 @@
     background-color: black;
 }
 
+.card-data{
+    display: flex ;
+    padding: none;
+    margin:1px;
+    font-size: 15px;
+
+
+
+}
+
 
