@@ -16,11 +16,72 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <h1>Weather Data</h1>
     
-    <input type="text" class="city">
-    <button class="click-me">Search City</button>
+    <header class="hero">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="row">
+
+   
+
+        <section class="col-12 col-md-4 flex-column justify-space-between">
+            
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                <label class="form-label" for="username"></label>
+                <input name="username" id="username" type="text" autofocus="true" class="form-input city" />
+                <button type="button" class="btn click-me">Search</button>
+                </form>
+                <ul class="history">
     
+                </ul>
+            </div>                   
+        
+        </section>
+        <section class="col-12 col-md-8 d-flex flex-column">
+            <div class = "col mb-3 upper">
+                <div class="card">
+                    <h4 class="card-header bg-light text-dark name">Name of city</h4>
+                    <ul class="cityData">
+                        <li class="temp">Temperature : <span class="tempData"></span></li>
+                        <li class="wind">Wind : <span class="windData"></span></li>
+                        <li class="humidity">Humidity : <span class="humidityData"></span></li>
+                        <li class="uvIndex">UV Index : <span class="uvData"></span></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">scdc
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">scdcdfdb
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">scdc4545
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">scdc435
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2">scdc343
+
+                </div>
+
+
+            </div>
+            
+
+
+
+            
+
+
+        </section>
+    </main>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
@@ -28,5 +89,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src = "assets/js/example.js"></script>
 </body>
 </html>
