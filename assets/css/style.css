@@ -43,8 +43,14 @@
   
 }
 .card-2{
-
-    color: black;
+    background-color: rgb(41, 41, 86);
+    text-align:left;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
 }
 .list-group-item{
     background-color: black;
@@ -54,13 +60,16 @@
     display: flex ;
     padding: none;
     margin:1px;
-    font-size: 15px;
+    font-size: 20px;
 
 
 
 }
 .reset{
     background-color:yellow;
+    width: 50%;
+    margin: 0 10px 0 40px;
+    color:black;
 }
 
 

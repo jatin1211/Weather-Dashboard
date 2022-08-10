@@ -24,26 +24,29 @@
 
    
 
-        <section class="col-12 col-md-4 flex-column justify-space-between">
+        <section class="col-12 col-md-3 flex-column justify-space-between">
             
             <div class="card">
                 <h3 class="card-header text-uppercase">Search for a City:</h3>
+                
                 <form id="user-form" class="card-body">
                 <label class="form-label" for="username"></label>
                 <input name="username" id="username" type="text" autofocus="true" class="form-input city" />
                 <button type="button" class="btn click-me">Search</button>
                 </form>
-                <button class="reset">RESET DATA</button>
+                <button class="btn reset">RESET DATA</button>
                 <ul class="history">
     
                 </ul>
             </div>                   
         
         </section>
-        <section class="col-12 col-md-8 d-flex flex-column">
+        <section class="col-12 col-md-9 d-flex flex-column">
             <div class = "col mb-3 upper">
                 <div class="card">
                     <h4 class="card-header bg-light text-dark name">Name of city</h4>
+                    <div id="icon"><img id="wicon" src="" alt=""></div>
+                    
                     <ul class="cityData">
                         <li class="temp">Temperature : <span class="tempData"></span></li>
                         <li class="wind">Wind : <span class="windData"></span></li>
@@ -53,27 +56,30 @@
                     </ul>
                 </div>
             </div>
-            <div class="row forecast-data">
-                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">
+            
+            <h3>5-day Forecast</h3>
+            <div class="row forecast-data mt-auto">
+                
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark card-2">
                     <ul class="card-2" id="day-1">
                         
 
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark card-2">
                     <ul class="card-2" id="day-2"></ul>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark card-2">
                     <ul class="card-2" id="day-3">
                        
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark card-2">
                     <ul class="card-2" id="day-4">
                         
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark">
+                <div class="col-sm-12 col-md-6 col-lg-2 border border-dark card-2">
                     <ul class="card-2" id="day-5">
                     
                     </ul>

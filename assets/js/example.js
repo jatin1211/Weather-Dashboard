@@ -13,6 +13,7 @@ var dayFiveEl = $("#day-5");
 var resetEl = $(".reset");
 var dayData = [dayOneEl, dayTwoEl, dayThreeEl, dayFourEl, dayFiveEl];
 
+
 const cityArr = [];
 
 clickEl.on("click", function () {
@@ -122,8 +123,13 @@ function getApi(cityName) {
 
 }
 function getInfo(data) {
-
-  nameEl.text(data.name);
+     var iconcode = data.weather[0].icon;
+    //console.log(data.weather[0].icon);
+     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+     $('#wicon').attr('src', iconurl);
+    
+  nameEl.text(data.name + "  " + moment().format('MMMM Do YYYY'));
+  //$(".date").text(moment());
   tempEl.text(data.main.temp + "°C");
   windEl.text(data.wind.speed + " MPH");
   humidityEl.text(data.main.humidity);
@@ -151,32 +157,28 @@ function getInfo5(latitude, longitude) {
       console.log(data);
 
 
-      console.log(data.list[0].main.temp);
-      console.log(data.list[0].wind.speed);
-      console.log(data.list[0].main.humidity);
-
 
       for (var i = 0; i < 5; i++) {
         var date = $("<p>");
-        date.text("Date: " + data.list[i].dt_txt);
+        date.text(data.list[i*8].dt_txt);
         date.addClass("card-date");
 
-        dayData[i].append(li);
+        dayData[i].append(date);
 
         var li = $("<p>");
-        li.text("Temp: " + data.list[i].main.temp + "°C");
+        li.text("Temp: " + data.list[i*8].main.temp + "°C");
         li.addClass("card-data");
 
         dayData[i].append(li);
 
         var li2 = $("<p>");
-        li2.text("Wind speed: " + data.list[i].wind.speed + "MPH");
+        li2.text("Wind speed: " + data.list[i*8].wind.speed + "MPH");
         li2.addClass("card-data");
 
         dayData[i].append(li2);
 
         var li3 = $("<p>");
-        li3.text("Humidity: " + data.list[i].main.humidity);
+        li3.text("Humidity: " + data.list[i*8].main.humidity);
         li3.addClass("card-data");
 
         dayData[i].append(li3);
