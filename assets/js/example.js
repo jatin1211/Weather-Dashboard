@@ -105,6 +105,8 @@ function getApi(cityName) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
     "&units=metric&APPID=1e6eaae9d442e0e35ea4708556663762";
+
+  // var url3 = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&units=metric&APPID=1e6eaae9d442e0e35ea4708556663762";
   fetch(url).then(function (response) {
     if (response.ok) {
       return response.json().then(function (data) {
@@ -123,6 +125,7 @@ function getApi(cityName) {
 
 }
 function getInfo(data) {
+  console.log(data);
      var iconcode = data.weather[0].icon;
     //console.log(data.weather[0].icon);
      var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -156,11 +159,18 @@ function getInfo5(latitude, longitude) {
     return res.json().then(function (data) {
       console.log(data);
 
+      
+      
+      console.log(day);
 
 
       for (var i = 0; i < 5; i++) {
         var date = $("<p>");
-        date.text(data.list[i*8].dt_txt);
+
+        var dayJs = dayjs.unix(data.list[i*8].dt);
+        var day = dayjs(dayJs).format('DD/MM/YYYY');
+        
+        date.text(day);
         date.addClass("card-date");
 
         dayData[i].append(date);
